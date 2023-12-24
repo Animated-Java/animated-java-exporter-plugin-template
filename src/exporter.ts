@@ -28,8 +28,8 @@ export function loadExporter() {
 				settingId: 'snavesutit:unnamed_exporter/foo',
 			},
 		],
-		async export(ajSettings, projectSettings, exporterSettings) {
-			console.log(ajSettings, projectSettings, exporterSettings)
+		async export({ajSettings, projectSettings, exporterSettings}) {
+			console.log({ajSettings, projectSettings, exporterSettings})
 			await new Promise(resolve => setTimeout(resolve, 100))
 		},
 	})
